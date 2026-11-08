@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: 852100867941.dkr.ecr.us-east-1.amazonaws.com/gab-app1-ecr:{{ .Values.image.tag }}
+          image: {{ .Values.image.repo }}:{{ .Values.image.tag }}
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
